@@ -15,18 +15,18 @@ export const Footer = ({ onOpenBooking }) => {
   };
 
   return (
-    <footer id="contact" className="bg-[#08080a] text-[#807f78] pt-14 pb-10 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-[#111114] rounded-3xl p-7 sm:p-10 lg:p-12 border border-[rgba(243,241,234,0.1)] mb-14 relative overflow-hidden">
+    <footer id="contact" className="bg-[#08080a] text-[#807f78] pt-10 sm:pt-14 pb-8 sm:pb-10 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-1.5 sm:px-6 lg:px-8">
+        <div className="bg-[#111114] rounded-2xl sm:rounded-3xl p-3.5 sm:p-10 lg:p-12 border border-[rgba(243,241,234,0.1)] mb-10 sm:mb-14 relative overflow-hidden">
           <div className="relative z-10 max-w-2xl">
-            <Eyebrow label={finalCtaContent.eyebrow} className="mb-3" />
-            <h2 className="font-display text-2xl sm:text-3xl lg:text-5xl uppercase tracking-tight text-[#f3f1ea] leading-[1.05]">
+            <Eyebrow label={finalCtaContent.eyebrow} className="mb-2 sm:mb-3" />
+            <h2 className="font-display text-xl sm:text-3xl lg:text-5xl uppercase tracking-tight text-[#f3f1ea] leading-[1.05]">
               {finalCtaContent.headline}
             </h2>
-            <p className="mt-3 text-sm text-[#807f78]">
+            <p className="mt-2.5 sm:mt-3 text-xs sm:text-sm text-[#807f78]">
               {finalCtaContent.subtext}
             </p>
-            <div className="mt-7 flex flex-wrap gap-3">
+            <div className="mt-6 sm:mt-7 flex flex-col sm:flex-row gap-3">
               <button
                 type="button"
                 onClick={() => {
@@ -34,10 +34,10 @@ export const Footer = ({ onOpenBooking }) => {
                   if (el) el.scrollIntoView({ behavior: 'smooth' });
                   if (onOpenBooking) onOpenBooking();
                 }}
-                className="h-11 px-7 bg-[#ff3b1d] hover:bg-[#ff6a3d] text-[#08080a] font-display text-xs uppercase tracking-wider rounded-full shadow-lg shadow-[#ff3b1d]/20 transition-all flex items-center gap-2 group"
+                className="w-full sm:w-auto h-11 px-5 sm:px-7 bg-[#ff3b1d] hover:bg-[#ff6a3d] text-[#08080a] font-display text-xs uppercase tracking-wider rounded-full shadow-lg shadow-[#ff3b1d]/20 transition-all flex items-center justify-center gap-2 group whitespace-nowrap"
               >
                 <span>{finalCtaContent.primaryCta}</span>
-                <IconArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <IconArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform shrink-0" />
               </button>
               <button
                 type="button"
@@ -45,9 +45,9 @@ export const Footer = ({ onOpenBooking }) => {
                   const el = document.getElementById('booking');
                   if (el) el.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="h-11 px-6 bg-[#17171b] hover:bg-[#202026] text-[#f3f1ea] font-medium text-xs rounded-full border border-[rgba(243,241,234,0.1)] transition-colors flex items-center gap-2"
+                className="w-full sm:w-auto h-11 px-5 sm:px-6 bg-[#17171b] hover:bg-[#202026] text-[#f3f1ea] font-medium text-xs rounded-full border border-[rgba(243,241,234,0.1)] transition-colors flex items-center justify-center gap-2 whitespace-nowrap"
               >
-                <IconPhone className="w-4 h-4 text-[#ff3b1d]" />
+                <IconPhone className="w-4 h-4 text-[#ff3b1d] shrink-0" />
                 <span>{finalCtaContent.secondaryCta}</span>
               </button>
             </div>
