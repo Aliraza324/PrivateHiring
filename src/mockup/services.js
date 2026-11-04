@@ -32,7 +32,7 @@ export const coreServices = [
     title: 'Chauffeur & Advance Bookings',
     shortDescription: 'Schedule important meetings, sporting events, and weddings weeks or months ahead with guaranteed vehicle allocation and suited drivers.',
     highlights: ['Guaranteed advance allocation', 'Suited professional chauffeurs', 'Flexible itinerary adjustments'],
-    image: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80',
     href: '/#booking'
   }
 ];

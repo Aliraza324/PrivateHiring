@@ -2,21 +2,21 @@ import { IconUsers, IconLuggage, IconCheck, IconWheelchair, IconArrowRight } fro
 
 export const FleetCard = ({ vehicle, onSelect }) => {
   return (
-    <div className="bg-[#111114] border border-[rgba(243,241,234,0.1)] rounded-2xl overflow-hidden hover:border-[#ff3b1d]/40 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1 hover:shadow-xl">
+    <div className="bg-[#111114] border border-[rgba(243,241,234,0.1)] rounded-2xl overflow-hidden hover:border-[#ff3b1d]/40 transition-[border-color,box-shadow,transform] duration-300 flex flex-col justify-between group hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/70 transform-gpu backface-hidden [contain:paint]">
       <div>
-        <div className="relative h-44 overflow-hidden bg-[#08080a]">
+        <div className="relative h-44 overflow-hidden bg-[#111114] [contain:paint]">
           <img
             src={vehicle.image}
             alt={vehicle.category}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out will-change-transform transform-gpu block"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#111114] via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#111114] from-20% via-[#111114]/50 to-transparent pointer-events-none" />
           <div className="absolute top-3 right-3 px-2.5 py-0.5 bg-[#08080a]/80 backdrop-blur-md border border-[rgba(243,241,234,0.1)] rounded-full text-[10px] font-semibold text-[#ff3b1d]">
             {vehicle.badge}
           </div>
         </div>
 
-        <div className="p-3.5 sm:p-5">
+        <div className="-mt-3 relative z-10 bg-[#111114] p-3.5 sm:p-5 pt-1 sm:pt-2">
           <h3 className="font-display text-xl uppercase tracking-tight text-[#f3f1ea] group-hover:text-[#ff3b1d] transition-colors">
             {vehicle.category}
           </h3>
