@@ -1,5 +1,6 @@
 import { fleetVehicles } from '../../mockup/fleet';
 import { FleetCard } from './FleetCard';
+import { Eyebrow } from '../common/Eyebrow';
 
 export const FleetSection = ({ onSelectVehicle }) => {
   const handleSelect = (vehicleId) => {
@@ -16,13 +17,11 @@ export const FleetSection = ({ onSelectVehicle }) => {
     <section id="our-fleet" className="py-20 lg:py-28 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="inline-block px-3.5 py-1 bg-amber-400/10 text-amber-400 border border-amber-400/20 text-xs font-semibold uppercase tracking-wider rounded-full mb-3">
-            Our Vehicle Categories
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          <Eyebrow label="Our Vehicle Categories" className="mb-3" />
+          <h2 className="font-display text-3xl sm:text-5xl uppercase tracking-tight text-[#f3f1ea]">
             Maintained to Impeccable Standards
           </h2>
-          <p className="mt-4 text-base text-slate-300">
+          <p className="mt-4 text-base text-[#807f78]">
             From everyday saloons to executive chauffeur cars, spacious multi-passenger vans, and certified accessible vehicles, our fleet is ready for every journey.
           </p>
         </div>
@@ -37,11 +36,10 @@ export const FleetSection = ({ onSelectVehicle }) => {
           ))}
         </div>
 
-        <div className="mt-8 text-center text-xs text-slate-400">
+        <div className="mt-8 text-center text-xs text-[#807f78]">
           <span>*Vehicle models shown are representative examples. Exact vehicle allocation is subject to availability and dispatch confirmation.</span>
         </div>
       </div>
     </section>
   );
 };
-

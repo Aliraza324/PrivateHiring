@@ -1,72 +1,107 @@
+import { useState, useEffect } from 'react';
 import { heroContent } from '../../mockup/hero';
-import { IconShield, IconArrowRight, IconCar } from '../common/Icons';
+import { Eyebrow } from '../common/Eyebrow';
+import { ClipWords, ClipLines } from '../common/ClipText';
+import { IconArrowRight, IconCar } from '../common/Icons';
 
-export const Hero = ({ onExploreServices, onGetFareEstimate }) => {
+export const Hero = ({ isReady, onExploreServices, onGetFareEstimate }) => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const parallaxOffset = Math.min(12, (scrollY / 800) * 12);
+
   return (
-    <section className="relative pt-28 pb-16 lg:pt-36 lg:pb-24 overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-950/90 to-slate-950 z-10" />
-        <img
-          src={heroContent.heroImage}
-          alt="Executive UK transport saloon"
-          className="w-full h-full object-cover object-center opacity-25 scale-105"
-        />
+    <section className="relative rounded-[2rem] overflow-hidden min-h-[38rem] lg:min-h-[46rem] flex flex-col justify-between p-6 sm:p-10 lg:p-16 bg-[#08080a] border border-[rgba(243,241,234,0.1)] isolate">
+      <div className="absolute inset-0 z-[-10] overflow-hidden">
+        <div
+          className="absolute inset-x-0 -top-[16%] h-[132%] w-full will-change-transform transition-transform duration-100 ease-out"
+          style={{ transform: `translateY(${parallaxOffset}%)` }}
+        >
+          <img
+            src={heroContent.heroImage}
+            alt="UK executive private hire transport"
+            className="w-full h-full object-cover object-center opacity-20 brightness-75 contrast-125"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#08080a]/60 to-[#08080a]" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-400 text-xs font-semibold tracking-wide uppercase mb-6 backdrop-blur-sm">
-            <IconShield className="w-3.5 h-3.5" />
-            <span>{heroContent.badge}</span>
-          </div>
+      <div className="pt-16 sm:pt-20 max-w-5xl relative z-10">
+        <Eyebrow label={heroContent.badge} className="mb-6" />
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1]">
-            Reliable Private Hire &{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500">
-              Airport Transfers
-            </span>
-            , Made Simple.
-          </h1>
+        <h1 className="font-display text-4xl sm:text-6xl lg:text-8xl tracking-tight leading-[0.92] uppercase text-[#f3f1ea]">
+          <ClipWords
+            text="Reliable Private Hire &"
+            isReady={isReady}
+            stagger={100}
+            baseDelay={100}
+            wordClassName="text-[#f3f1ea]"
+          />
+          <br />
+          <ClipWords
+            text="Airport Transfers"
+            isReady={isReady}
+            stagger={120}
+            baseDelay={400}
+            wordClassName="text-[#ff3b1d]"
+          />
+          <span className="text-[#f3f1ea]">, </span>
+          <ClipWords
+            text="Made Simple."
+            isReady={isReady}
+            stagger={120}
+            baseDelay={750}
+            wordClassName="text-[#f3f1ea]"
+          />
+        </h1>
 
-          <p className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed font-normal max-w-2xl">
-            {heroContent.supportingText}
-          </p>
+        <div className="mt-6 max-w-2xl">
+          <ClipLines
+            lines={[
+              'Book your journey in minutes with flexible vehicle options,',
+              'advance reservations, and professional UK transport service.'
+            ]}
+            isReady={isReady}
+            baseDelay={900}
+            stagger={90}
+            lineClassName="text-base sm:text-lg text-[#807f78] leading-relaxed font-normal"
+          />
+        </div>
+      </div>
 
-          <div className="mt-8 flex flex-wrap items-center gap-4">
-            <button
-              type="button"
-              onClick={onGetFareEstimate}
-              className="px-7 py-3.5 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-bold text-sm uppercase tracking-wider rounded-xl shadow-xl shadow-amber-500/20 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-2.5"
-            >
-              <span>{heroContent.primaryCta}</span>
-              <IconArrowRight className="w-4 h-4" />
-            </button>
+      <div className="mt-12 pt-8 border-t border-[rgba(243,241,234,0.1)] flex flex-col lg:flex-row items-start lg:items-end justify-between gap-6 relative z-10">
+        <div className="flex flex-wrap items-center gap-4">
+          <button
+            type="button"
+            onClick={onGetFareEstimate}
+            className="px-8 py-4 bg-[#ff3b1d] hover:bg-[#ff6a3d] text-[#08080a] font-display uppercase tracking-wider text-sm rounded-full shadow-2xl shadow-[#ff3b1d]/25 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-2.5 group"
+          >
+            <span>{heroContent.primaryCta}</span>
+            <IconArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </button>
 
-            <button
-              type="button"
-              onClick={onExploreServices}
-              className="px-6 py-3.5 bg-slate-900/80 hover:bg-slate-800 text-white font-semibold text-sm rounded-xl border border-slate-700/80 backdrop-blur-sm transition-colors flex items-center gap-2"
-            >
-              <IconCar className="w-4 h-4 text-amber-400" />
-              <span>{heroContent.secondaryCta}</span>
-            </button>
-          </div>
+          <button
+            type="button"
+            onClick={onExploreServices}
+            className="px-6 py-4 bg-[#111114] hover:bg-[#17171b] text-[#f3f1ea] font-medium text-sm rounded-full border border-[rgba(243,241,234,0.15)] transition-all flex items-center gap-2"
+          >
+            <IconCar className="w-4 h-4 text-[#ff3b1d]" />
+            <span>{heroContent.secondaryCta}</span>
+          </button>
+        </div>
 
-          <div className="mt-12 pt-8 border-t border-slate-800/80 grid grid-cols-3 gap-4 sm:gap-8 max-w-xl">
-            {heroContent.stats.map((stat, idx) => (
-              <div key={idx}>
-                <div className="text-xl sm:text-2xl font-black text-white tracking-tight">
-                  {stat.value}
-                </div>
-                <div className="text-xs text-slate-400 font-medium mt-0.5">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
+        <div className="flex items-center gap-3 text-xs uppercase tracking-[0.22em] text-[#807f78]">
+          <span className="w-10 h-[1px] bg-[#ff3b1d]" />
+          <span>Scroll to enter</span>
         </div>
       </div>
     </section>
   );
 };
-

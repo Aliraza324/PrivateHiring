@@ -1,18 +1,17 @@
 import { trustPillars, operatorCredentials } from '../../mockup/trust';
+import { Eyebrow } from '../common/Eyebrow';
 import { IconShield, IconCheck } from '../common/Icons';
 
 export const TrustSection = () => {
   return (
-    <section id="trust" className="py-20 lg:py-28 bg-slate-950/70 border-y border-slate-900 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="trust" className="py-20 px-6 sm:px-10 lg:px-16 rounded-[2rem] bg-[#111114] border border-[rgba(243,241,234,0.1)] relative">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block px-3.5 py-1 bg-amber-400/10 text-amber-400 border border-amber-400/20 text-xs font-semibold uppercase tracking-wider rounded-full mb-3">
-            Peace of Mind
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          <Eyebrow label="Peace of Mind" className="mb-3" />
+          <h2 className="font-display text-3xl sm:text-5xl uppercase tracking-tight text-[#f3f1ea]">
             Why Discerning Passengers Choose Apex
           </h2>
-          <p className="mt-4 text-base text-slate-300">
+          <p className="mt-4 text-base text-[#807f78]">
             We operate in full compliance with UK Private Hire regulations, prioritizing passenger safety, punctuality, and complete billing transparency.
           </p>
         </div>
@@ -21,51 +20,51 @@ export const TrustSection = () => {
           {trustPillars.map((pillar) => (
             <div
               key={pillar.id}
-              className="bg-slate-900/80 border border-slate-800 rounded-3xl p-7 hover:border-amber-400/40 transition-all flex flex-col justify-between"
+              className="bg-[#08080a] border border-[rgba(243,241,234,0.1)] rounded-3xl p-7 hover:border-[#ff3b1d]/40 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="text-2xl font-black text-amber-400">
+                  <div className="font-display text-4xl text-[#ff3b1d]">
                     {pillar.stat}
                   </div>
-                  <span className="text-[10px] uppercase font-bold tracking-wider text-slate-400 bg-slate-950 px-2.5 py-1 rounded-md border border-slate-800">
+                  <span className="text-[10px] uppercase font-bold tracking-wider text-[#807f78] bg-[#111114] px-2.5 py-1 rounded-md border border-[rgba(243,241,234,0.1)]">
                     {pillar.statLabel}
                   </span>
                 </div>
 
-                <h3 className="text-lg font-bold text-white mb-2">
+                <h3 className="font-display text-xl uppercase tracking-tight text-[#f3f1ea] mb-2">
                   {pillar.title}
                 </h3>
-                <p className="text-xs text-slate-400 leading-relaxed">
+                <p className="text-xs text-[#807f78] leading-relaxed">
                   {pillar.description}
                 </p>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-slate-800/80 flex items-center gap-2 text-xs text-emerald-400">
+              <div className="mt-6 pt-4 border-t border-[rgba(243,241,234,0.1)] flex items-center gap-2 text-xs text-emerald-400">
                 <IconCheck className="w-4 h-4" />
                 <span>Verified Service Standard</span>
               </div>
             </div>
           ))}
 
-          <div className="bg-gradient-to-br from-amber-950/40 via-slate-900 to-slate-900 border border-amber-500/30 rounded-3xl p-7 flex flex-col justify-between">
+          <div className="bg-gradient-to-br from-[#ff3b1d]/15 via-[#08080a] to-[#08080a] border border-[#ff3b1d]/30 rounded-3xl p-7 flex flex-col justify-between hover:-translate-y-1 transition-transform">
             <div>
-              <div className="w-10 h-10 rounded-xl bg-amber-400/20 text-amber-400 flex items-center justify-center mb-4">
+              <div className="w-10 h-10 rounded-xl bg-[#ff3b1d]/20 text-[#ff3b1d] flex items-center justify-center mb-4">
                 <IconShield className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-bold text-white mb-3">
+              <h3 className="font-display text-xl uppercase tracking-tight text-[#f3f1ea] mb-3">
                 Full Regulatory Compliance
               </h3>
-              <p className="text-xs text-slate-300 leading-relaxed">
+              <p className="text-xs text-[#807f78] leading-relaxed">
                 Operating strictly within UK private hire licensing frameworks with insured, DBS-vetted drivers and inspected vehicles.
               </p>
             </div>
 
-            <div className="mt-6 pt-4 border-t border-slate-800/80 space-y-2">
+            <div className="mt-6 pt-4 border-t border-[rgba(243,241,234,0.1)] space-y-2">
               {operatorCredentials.map((cred, i) => (
-                <div key={i} className="text-[11px] text-slate-300 flex items-center justify-between">
-                  <span className="text-slate-400">{cred.label}:</span>
-                  <span className="font-semibold text-white">{cred.value}</span>
+                <div key={i} className="text-[11px] text-[#f3f1ea] flex items-center justify-between">
+                  <span className="text-[#807f78]">{cred.label}:</span>
+                  <span className="font-semibold text-[#f3f1ea]">{cred.value}</span>
                 </div>
               ))}
             </div>
@@ -75,4 +74,3 @@ export const TrustSection = () => {
     </section>
   );
 };
-

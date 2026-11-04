@@ -8,3 +8,4 @@ export * from './trust.js';
 export * from './airports.js';
 export * from './corporate.js';
 export * from './footer.js';
+export * from './marquee.js';

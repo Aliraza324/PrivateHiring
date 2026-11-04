@@ -22,21 +22,21 @@ export const CorporateModal = ({ isOpen, onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md overflow-y-auto">
-      <div className="relative w-full max-w-lg bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl text-slate-100 my-8">
-        <div className="flex items-center justify-between pb-4 border-b border-slate-800">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#08080a]/80 backdrop-blur-md overflow-y-auto">
+      <div className="relative w-full max-w-lg bg-[#111114] border border-[rgba(243,241,234,0.15)] rounded-3xl p-6 sm:p-8 shadow-2xl text-[#f3f1ea] my-8">
+        <div className="flex items-center justify-between pb-4 border-b border-[rgba(243,241,234,0.1)]">
           <div className="flex items-center gap-2">
-            <span className="w-8 h-8 rounded-xl bg-amber-400/20 text-amber-400 flex items-center justify-center">
+            <span className="w-8 h-8 rounded-xl bg-[#ff3b1d]/20 text-[#ff3b1d] flex items-center justify-center">
               <IconBuilding className="w-4 h-4" />
             </span>
-            <span className="text-sm font-bold uppercase tracking-wider text-white">
+            <span className="font-display text-base uppercase tracking-wider text-[#f3f1ea]">
               Corporate Account Enquiry
             </span>
           </div>
           <button
             type="button"
             onClick={handleReset}
-            className="p-1.5 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition-colors"
+            className="p-1.5 text-[#807f78] hover:text-[#f3f1ea] rounded-lg hover:bg-[#17171b] transition-colors"
           >
             <IconClose className="w-5 h-5" />
           </button>
@@ -47,17 +47,17 @@ export const CorporateModal = ({ isOpen, onClose }) => {
             <div className="w-14 h-14 rounded-full bg-emerald-400/20 text-emerald-400 border border-emerald-400/30 flex items-center justify-center mx-auto">
               <IconCheck className="w-8 h-8" />
             </div>
-            <h3 className="text-xl font-bold text-white">
+            <h3 className="font-display text-2xl uppercase tracking-tight text-[#f3f1ea]">
               Enquiry Received
             </h3>
-            <p className="text-xs text-slate-400 max-w-sm mx-auto leading-relaxed">
+            <p className="text-xs text-[#807f78] max-w-sm mx-auto leading-relaxed">
               Thank you, {contactName || 'Valued Client'}. Our UK corporate accounts manager will review {companyName || 'your business'} requirements and respond within 2 business hours.
             </p>
             <div className="pt-4">
               <button
                 type="button"
                 onClick={handleReset}
-                className="px-6 py-2.5 bg-slate-800 hover:bg-slate-700 text-white font-semibold text-xs rounded-xl"
+                className="px-6 py-2.5 bg-[#17171b] hover:bg-[#202026] text-[#f3f1ea] font-semibold text-xs rounded-xl"
               >
                 Close Window
               </button>
@@ -65,13 +65,13 @@ export const CorporateModal = ({ isOpen, onClose }) => {
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="mt-5 space-y-4">
-            <p className="text-xs text-slate-400">
+            <p className="text-xs text-[#807f78]">
               Set up business invoicing, priority chauffeuring, and dedicated corporate travel rates for your enterprise.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
-                <label className="block text-[11px] font-semibold uppercase tracking-wider text-slate-400 mb-1">
+                <label className="block text-[11px] font-semibold uppercase tracking-wider text-[#807f78] mb-1">
                   Company Name
                 </label>
                 <input
@@ -80,11 +80,11 @@ export const CorporateModal = ({ isOpen, onClose }) => {
                   value={companyName}
                   onChange={(e) => setCompanyName(e.target.value)}
                   placeholder="Acme Legal LLP"
-                  className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-amber-400"
+                  className="w-full bg-[#08080a] border border-[rgba(243,241,234,0.1)] rounded-xl px-3 py-2 text-xs text-[#f3f1ea] focus:outline-none focus:border-[#ff3b1d]"
                 />
               </div>
               <div>
-                <label className="block text-[11px] font-semibold uppercase tracking-wider text-slate-400 mb-1">
+                <label className="block text-[11px] font-semibold uppercase tracking-wider text-[#807f78] mb-1">
                   Contact Name
                 </label>
                 <input
@@ -93,14 +93,14 @@ export const CorporateModal = ({ isOpen, onClose }) => {
                   value={contactName}
                   onChange={(e) => setContactName(e.target.value)}
                   placeholder="Sarah Jenkins"
-                  className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-amber-400"
+                  className="w-full bg-[#08080a] border border-[rgba(243,241,234,0.1)] rounded-xl px-3 py-2 text-xs text-[#f3f1ea] focus:outline-none focus:border-[#ff3b1d]"
                 />
               </div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
-                <label className="block text-[11px] font-semibold uppercase tracking-wider text-slate-400 mb-1">
+                <label className="block text-[11px] font-semibold uppercase tracking-wider text-[#807f78] mb-1">
                   Work Email
                 </label>
                 <input
@@ -109,11 +109,11 @@ export const CorporateModal = ({ isOpen, onClose }) => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="sarah@acme.co.uk"
-                  className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-amber-400"
+                  className="w-full bg-[#08080a] border border-[rgba(243,241,234,0.1)] rounded-xl px-3 py-2 text-xs text-[#f3f1ea] focus:outline-none focus:border-[#ff3b1d]"
                 />
               </div>
               <div>
-                <label className="block text-[11px] font-semibold uppercase tracking-wider text-slate-400 mb-1">
+                <label className="block text-[11px] font-semibold uppercase tracking-wider text-[#807f78] mb-1">
                   Direct Phone
                 </label>
                 <input
@@ -122,19 +122,19 @@ export const CorporateModal = ({ isOpen, onClose }) => {
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                   placeholder="020 7000 0000"
-                  className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-amber-400"
+                  className="w-full bg-[#08080a] border border-[rgba(243,241,234,0.1)] rounded-xl px-3 py-2 text-xs text-[#f3f1ea] focus:outline-none focus:border-[#ff3b1d]"
                 />
               </div>
             </div>
 
             <div>
-              <label className="block text-[11px] font-semibold uppercase tracking-wider text-slate-400 mb-1">
+              <label className="block text-[11px] font-semibold uppercase tracking-wider text-[#807f78] mb-1">
                 Estimated Monthly Journeys
               </label>
               <select
                 value={estRides}
                 onChange={(e) => setEstRides(e.target.value)}
-                className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-amber-400"
+                className="w-full bg-[#08080a] border border-[rgba(243,241,234,0.1)] rounded-xl px-3 py-2 text-xs text-[#f3f1ea] focus:outline-none focus:border-[#ff3b1d]"
               >
                 <option value="1-10">1 - 10 journeys / month</option>
                 <option value="10-30">10 - 30 journeys / month</option>
@@ -146,7 +146,7 @@ export const CorporateModal = ({ isOpen, onClose }) => {
             <div className="pt-2 flex gap-3">
               <button
                 type="submit"
-                className="flex-1 py-3 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-bold text-xs uppercase tracking-wider rounded-xl transition-all"
+                className="flex-1 py-3 bg-[#ff3b1d] hover:bg-[#ff6a3d] text-[#08080a] font-display text-xs uppercase tracking-wider rounded-xl transition-all"
               >
                 Submit Corporate Enquiry
               </button>
@@ -157,4 +157,3 @@ export const CorporateModal = ({ isOpen, onClose }) => {
     </div>
   );
 };
-

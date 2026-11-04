@@ -1,4 +1,5 @@
 import { howItWorksSteps } from '../../mockup/howItWorks';
+import { Eyebrow } from '../common/Eyebrow';
 import { IconArrowRight } from '../common/Icons';
 
 export const HowItWorks = ({ onBookNow }) => {
@@ -6,13 +7,11 @@ export const HowItWorks = ({ onBookNow }) => {
     <section id="how-it-works" className="py-20 lg:py-28 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block px-3.5 py-1 bg-amber-400/10 text-amber-400 border border-amber-400/20 text-xs font-semibold uppercase tracking-wider rounded-full mb-3">
-            Simple 3-Step Process
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          <Eyebrow label="Simple 3-Step Process" className="mb-3" />
+          <h2 className="font-display text-3xl sm:text-5xl uppercase tracking-tight text-[#f3f1ea]">
             How Your Booking Works
           </h2>
-          <p className="mt-4 text-base text-slate-300">
+          <p className="mt-4 text-base text-[#807f78]">
             Booking your private hire journey takes less than three minutes with clear upfront details and immediate dispatch alerts.
           </p>
         </div>
@@ -21,27 +20,27 @@ export const HowItWorks = ({ onBookNow }) => {
           {howItWorksSteps.map((item, idx) => (
             <div
               key={idx}
-              className="bg-slate-900/90 border border-slate-800 rounded-3xl p-8 relative flex flex-col justify-between hover:border-amber-400/40 transition-all group"
+              className="bg-[#111114] border border-[rgba(243,241,234,0.1)] rounded-3xl p-8 relative flex flex-col justify-between hover:border-[#ff3b1d]/40 transition-all group"
             >
               <div>
                 <div className="flex items-center justify-between mb-6">
-                  <div className="w-12 h-12 rounded-2xl bg-amber-400/10 border border-amber-400/20 flex items-center justify-center text-amber-400 font-mono font-bold text-lg">
+                  <div className="w-12 h-12 rounded-2xl bg-[#ff3b1d]/10 border border-[#ff3b1d]/20 flex items-center justify-center text-[#ff3b1d] font-display text-xl">
                     {item.step}
                   </div>
-                  <span className="text-[11px] font-semibold text-slate-400 px-3 py-1 bg-slate-950 rounded-full border border-slate-800">
+                  <span className="text-[11px] font-semibold text-[#807f78] px-3 py-1 bg-[#08080a] rounded-full border border-[rgba(243,241,234,0.1)]">
                     {item.badge}
                   </span>
                 </div>
 
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-amber-400 transition-colors">
+                <h3 className="font-display text-2xl uppercase tracking-tight text-[#f3f1ea] mb-3 group-hover:text-[#ff3b1d] transition-colors">
                   {item.title}
                 </h3>
-                <p className="text-sm text-slate-400 leading-relaxed">
+                <p className="text-sm text-[#807f78] leading-relaxed">
                   {item.description}
                 </p>
               </div>
 
-              <div className="mt-8 pt-4 border-t border-slate-800/80 flex items-center gap-2 text-xs font-semibold text-amber-400">
+              <div className="mt-8 pt-4 border-t border-[rgba(243,241,234,0.1)] flex items-center gap-2 text-xs font-semibold text-[#ff3b1d]">
                 <span>Step {item.step} of 03</span>
                 <IconArrowRight className="w-3.5 h-3.5" />
               </div>
@@ -53,14 +52,13 @@ export const HowItWorks = ({ onBookNow }) => {
           <button
             type="button"
             onClick={onBookNow}
-            className="px-8 py-3.5 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg shadow-amber-500/20 transition-all inline-flex items-center gap-2"
+            className="px-8 py-4 bg-[#ff3b1d] hover:bg-[#ff6a3d] text-[#08080a] font-display text-xs uppercase tracking-wider rounded-full shadow-lg shadow-[#ff3b1d]/20 transition-all inline-flex items-center gap-2 group"
           >
             <span>Book Your Ride Now</span>
-            <IconArrowRight className="w-4 h-4" />
+            <IconArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </button>
         </div>
       </div>
     </section>
   );
 };
-

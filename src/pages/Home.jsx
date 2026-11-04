@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import { useOutletContext } from 'react-router';
 import { Hero } from '../components/hero/Hero';
 import { BookingWidget } from '../components/booking/BookingWidget';
+import { Marquee } from '../components/common/Marquee';
 import { FleetSection } from '../components/fleet/FleetSection';
 import { CoreServices } from '../components/services/CoreServices';
 import { HowItWorks } from '../components/howItWorks/HowItWorks';
@@ -9,6 +11,7 @@ import { AirportSection } from '../components/airports/AirportSection';
 import { CorporateSection } from '../components/corporate/CorporateSection';
 
 export const Home = () => {
+  const { isReady = true } = useOutletContext() || {};
   const [selectedVehicleId, setSelectedVehicleId] = useState('standard');
 
   const scrollToBooking = () => {
@@ -26,8 +29,9 @@ export const Home = () => {
   };
 
   return (
-    <div className="space-y-4">
+    <div className="flex flex-col gap-3">
       <Hero
+        isReady={isReady}
         onGetFareEstimate={scrollToBooking}
         onExploreServices={() => {
           const el = document.getElementById('our-fleet');
@@ -39,6 +43,8 @@ export const Home = () => {
         selectedVehicleId={selectedVehicleId}
         onSelectVehicleInWidget={setSelectedVehicleId}
       />
+
+      <Marquee />
 
       <FleetSection onSelectVehicle={handleSelectVehicle} />
 
@@ -54,4 +60,3 @@ export const Home = () => {
     </div>
   );
 };
-

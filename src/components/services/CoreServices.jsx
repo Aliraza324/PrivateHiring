@@ -1,5 +1,6 @@
 import { Link } from 'react-router';
 import { coreServices } from '../../mockup/services';
+import { Eyebrow } from '../common/Eyebrow';
 import { IconCheck, IconArrowRight } from '../common/Icons';
 
 export const CoreServices = () => {
@@ -13,16 +14,14 @@ export const CoreServices = () => {
   };
 
   return (
-    <section className="py-20 bg-slate-950/60 border-y border-slate-900 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 px-6 sm:px-10 lg:px-16 rounded-[2rem] bg-[#111114] border border-[rgba(243,241,234,0.1)] relative">
+      <div className="max-w-7xl mx-auto">
         <div className="max-w-3xl mb-14">
-          <span className="inline-block px-3.5 py-1 bg-amber-400/10 text-amber-400 border border-amber-400/20 text-xs font-semibold uppercase tracking-wider rounded-full mb-3">
-            What We Do
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          <Eyebrow label="What We Do" className="mb-3" />
+          <h2 className="font-display text-3xl sm:text-5xl uppercase tracking-tight text-[#f3f1ea]">
             Specialist Private Hire & Transport Services
           </h2>
-          <p className="mt-4 text-base text-slate-300">
+          <p className="mt-4 text-base text-[#807f78]">
             Tailored journeys backed by licensed chauffeurs, modern clean vehicles, and 24/7 dedicated telephone dispatch support.
           </p>
         </div>
@@ -31,29 +30,29 @@ export const CoreServices = () => {
           {coreServices.map((service) => (
             <div
               key={service.id}
-              className="bg-slate-900/80 border border-slate-800 rounded-3xl p-8 hover:border-amber-500/40 transition-all flex flex-col justify-between group hover:shadow-xl"
+              className="bg-[#08080a] border border-[rgba(243,241,234,0.1)] rounded-3xl p-8 hover:border-[#ff3b1d]/40 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1 hover:shadow-xl"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl font-black text-amber-400/60 font-mono">
+                  <span className="font-display text-3xl font-normal text-[#ff3b1d]">
                     {service.number}
                   </span>
-                  <span className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 group-hover:text-amber-400 group-hover:bg-amber-400/10 transition-colors">
-                    <IconArrowRight className="w-4 h-4" />
+                  <span className="w-9 h-9 rounded-full bg-[#111114] flex items-center justify-center text-[#807f78] group-hover:text-[#ff3b1d] group-hover:bg-[#ff3b1d]/10 transition-colors">
+                    <IconArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </div>
 
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-amber-400 transition-colors">
+                <h3 className="font-display text-2xl uppercase tracking-tight text-[#f3f1ea] mb-2 group-hover:text-[#ff3b1d] transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-sm text-slate-400 leading-relaxed mb-6">
+                <p className="text-sm text-[#807f78] leading-relaxed mb-6">
                   {service.shortDescription}
                 </p>
 
-                <div className="space-y-2 pt-4 border-t border-slate-800/80">
+                <div className="space-y-2 pt-4 border-t border-[rgba(243,241,234,0.1)]">
                   {service.highlights.map((item, idx) => (
-                    <div key={idx} className="flex items-center gap-2.5 text-xs text-slate-300">
-                      <IconCheck className="w-4 h-4 text-amber-400 flex-shrink-0" />
+                    <div key={idx} className="flex items-center gap-2.5 text-xs text-[#f3f1ea]">
+                      <IconCheck className="w-4 h-4 text-[#ff3b1d] shrink-0" />
                       <span>{item}</span>
                     </div>
                   ))}
@@ -64,10 +63,10 @@ export const CoreServices = () => {
                 <Link
                   to={service.href}
                   onClick={() => handleScroll(service.href)}
-                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-400 hover:text-amber-300 transition-colors"
+                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-[#ff3b1d] hover:text-[#ff6a3d] transition-colors group/link"
                 >
                   <span>Book This Service</span>
-                  <IconArrowRight className="w-3.5 h-3.5" />
+                  <IconArrowRight className="w-3.5 h-3.5 group-hover/link:translate-x-1 transition-transform" />
                 </Link>
               </div>
             </div>
@@ -77,4 +76,3 @@ export const CoreServices = () => {
     </section>
   );
 };
-
