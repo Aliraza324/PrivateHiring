@@ -15,18 +15,18 @@ export const Footer = ({ onOpenBooking }) => {
   };
 
   return (
-    <footer id="contact" className="bg-[#08080a] text-[#807f78] pt-16 pb-12 relative overflow-hidden">
+    <footer id="contact" className="bg-[#08080a] text-[#807f78] pt-14 pb-10 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-[#111114] rounded-3xl p-8 sm:p-12 lg:p-16 border border-[rgba(243,241,234,0.1)] mb-16 relative overflow-hidden">
-          <div className="relative z-10 max-w-3xl">
-            <Eyebrow label={finalCtaContent.eyebrow} className="mb-4" />
-            <h2 className="font-display text-3xl sm:text-5xl lg:text-7xl uppercase tracking-tight text-[#f3f1ea] leading-[0.95]">
+        <div className="bg-[#111114] rounded-3xl p-7 sm:p-10 lg:p-12 border border-[rgba(243,241,234,0.1)] mb-14 relative overflow-hidden">
+          <div className="relative z-10 max-w-2xl">
+            <Eyebrow label={finalCtaContent.eyebrow} className="mb-3" />
+            <h2 className="font-display text-2xl sm:text-3xl lg:text-5xl uppercase tracking-tight text-[#f3f1ea] leading-[1.05]">
               {finalCtaContent.headline}
             </h2>
-            <p className="mt-4 text-base text-[#807f78] max-w-2xl">
+            <p className="mt-3 text-sm text-[#807f78]">
               {finalCtaContent.subtext}
             </p>
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="mt-7 flex flex-wrap gap-3">
               <button
                 type="button"
                 onClick={() => {
@@ -34,7 +34,7 @@ export const Footer = ({ onOpenBooking }) => {
                   if (el) el.scrollIntoView({ behavior: 'smooth' });
                   if (onOpenBooking) onOpenBooking();
                 }}
-                className="px-8 py-4 bg-[#ff3b1d] hover:bg-[#ff6a3d] text-[#08080a] font-display text-sm uppercase tracking-wider rounded-full shadow-lg shadow-[#ff3b1d]/20 transition-all flex items-center gap-2 group"
+                className="h-11 px-7 bg-[#ff3b1d] hover:bg-[#ff6a3d] text-[#08080a] font-display text-xs uppercase tracking-wider rounded-full shadow-lg shadow-[#ff3b1d]/20 transition-all flex items-center gap-2 group"
               >
                 <span>{finalCtaContent.primaryCta}</span>
                 <IconArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -45,7 +45,7 @@ export const Footer = ({ onOpenBooking }) => {
                   const el = document.getElementById('booking');
                   if (el) el.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="px-6 py-4 bg-[#17171b] hover:bg-[#202026] text-[#f3f1ea] font-medium text-sm rounded-full border border-[rgba(243,241,234,0.1)] transition-colors flex items-center gap-2"
+                className="h-11 px-6 bg-[#17171b] hover:bg-[#202026] text-[#f3f1ea] font-medium text-xs rounded-full border border-[rgba(243,241,234,0.1)] transition-colors flex items-center gap-2"
               >
                 <IconPhone className="w-4 h-4 text-[#ff3b1d]" />
                 <span>{finalCtaContent.secondaryCta}</span>
@@ -54,8 +54,8 @@ export const Footer = ({ onOpenBooking }) => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-[rgba(243,241,234,0.1)]">
-          <div className="lg:col-span-2 space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-10 border-b border-[rgba(243,241,234,0.1)]">
+          <div className="lg:col-span-2 space-y-3">
             <Link to="/" className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl overflow-hidden bg-[#111114] border border-[rgba(243,241,234,0.2)] p-0.5">
                 <img
@@ -64,14 +64,14 @@ export const Footer = ({ onOpenBooking }) => {
                   className="w-full h-full object-cover rounded-lg"
                 />
               </div>
-              <div className="font-display text-xl uppercase tracking-tight text-[#f3f1ea]">
+              <div className="font-display text-lg uppercase tracking-tight text-[#f3f1ea]">
                 <span>APEX</span> <span className="text-[#ff3b1d]">PRIVATE HIRE</span>
               </div>
             </Link>
-            <p className="text-sm text-[#807f78] leading-relaxed max-w-sm">
+            <p className="text-xs text-[#807f78] leading-relaxed max-w-sm">
               Premium UK passenger transport, executive chauffeur services, and guaranteed airport connections across London, the South East, and major UK cities.
             </p>
-            <div className="pt-2 text-xs text-[#807f78] space-y-1">
+            <div className="pt-1 text-[11px] text-[#807f78] space-y-1">
               <div>{footerData.companyNumber}</div>
               <div className="text-[#ff3b1d] flex items-center gap-1.5 font-medium">
                 <IconShield className="w-3.5 h-3.5" />
@@ -81,10 +81,10 @@ export const Footer = ({ onOpenBooking }) => {
           </div>
 
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-[0.22em] text-[#f3f1ea] mb-4">
+            <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-[#f3f1ea] mb-3">
               Our Services
             </h4>
-            <ul className="space-y-2.5 text-sm">
+            <ul className="space-y-2 text-xs">
               {footerData.serviceLinks.map((item, idx) => (
                 <li key={idx}>
                   <Link
@@ -100,10 +100,10 @@ export const Footer = ({ onOpenBooking }) => {
           </div>
 
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-[0.22em] text-[#f3f1ea] mb-4">
+            <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-[#f3f1ea] mb-3">
               Company
             </h4>
-            <ul className="space-y-2.5 text-sm">
+            <ul className="space-y-2 text-xs">
               {footerData.companyLinks.map((item, idx) => (
                 <li key={idx}>
                   <Link
@@ -119,31 +119,31 @@ export const Footer = ({ onOpenBooking }) => {
           </div>
 
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-[0.22em] text-[#f3f1ea] mb-4">
+            <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-[#f3f1ea] mb-3">
               Contact Dispatch
             </h4>
-            <div className="text-sm space-y-3 text-[#807f78]">
+            <div className="text-xs space-y-2.5 text-[#807f78]">
               <div>
-                <span className="block text-[11px] text-[#807f78] uppercase tracking-[0.18em]">24/7 UK Phone</span>
+                <span className="block text-[10px] text-[#807f78] uppercase tracking-[0.18em]">24/7 UK Phone</span>
                 <span className="font-semibold text-[#f3f1ea]">{brandData.phone}</span>
               </div>
               <div>
-                <span className="block text-[11px] text-[#807f78] uppercase tracking-[0.18em]">Bookings Email</span>
+                <span className="block text-[10px] text-[#807f78] uppercase tracking-[0.18em]">Bookings Email</span>
                 <span className="text-[#f3f1ea]">{brandData.email}</span>
               </div>
               <div>
-                <span className="block text-[11px] text-[#807f78] uppercase tracking-[0.18em]">Operating Hours</span>
+                <span className="block text-[10px] text-[#807f78] uppercase tracking-[0.18em]">Operating Hours</span>
                 <span className="text-[#807f78]">{footerData.operatingHours}</span>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#807f78]">
-          <div className="font-display tracking-wide uppercase">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#807f78]">
+          <div className="font-display tracking-wide uppercase text-[11px]">
             &copy; {new Date().getFullYear()} {footerData.companyName}. All rights reserved.
           </div>
-          <div className="flex flex-wrap items-center gap-6">
+          <div className="flex flex-wrap items-center gap-5 text-xs">
             {footerData.legalLinks.map((item, idx) => (
               <Link
                 key={idx}

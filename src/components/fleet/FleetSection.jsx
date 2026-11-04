@@ -14,19 +14,19 @@ export const FleetSection = ({ onSelectVehicle }) => {
   };
 
   return (
-    <section id="our-fleet" className="py-20 lg:py-28 relative">
+    <section id="our-fleet" className="py-16 lg:py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <Eyebrow label="Our Vehicle Categories" className="mb-3" />
-          <h2 className="font-display text-3xl sm:text-5xl uppercase tracking-tight text-[#f3f1ea]">
+        <div className="text-center max-w-2xl mx-auto mb-10">
+          <Eyebrow label="Our Vehicle Categories" className="mb-2" />
+          <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl uppercase tracking-tight text-[#f3f1ea]">
             Maintained to Impeccable Standards
           </h2>
-          <p className="mt-4 text-base text-[#807f78]">
+          <p className="mt-3 text-sm text-[#807f78]">
             From everyday saloons to executive chauffeur cars, spacious multi-passenger vans, and certified accessible vehicles, our fleet is ready for every journey.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
           {fleetVehicles.map((vehicle) => (
             <FleetCard
               key={vehicle.id}
@@ -36,7 +36,7 @@ export const FleetSection = ({ onSelectVehicle }) => {
           ))}
         </div>
 
-        <div className="mt-8 text-center text-xs text-[#807f78]">
+        <div className="mt-6 text-center text-xs text-[#807f78]">
           <span>*Vehicle models shown are representative examples. Exact vehicle allocation is subject to availability and dispatch confirmation.</span>
         </div>
       </div>
