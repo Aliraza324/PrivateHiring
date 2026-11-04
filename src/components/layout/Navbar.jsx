@@ -45,7 +45,7 @@ export const Navbar = ({ onOpenBooking, onOpenMobileMenu }) => {
                 key={link.id}
                 to={link.path}
                 onClick={() => scrollToSection(link.path)}
-                className="relative py-1 text-xs font-medium uppercase tracking-[0.14em] text-[#807f78] hover:text-[#f3f1ea] transition-colors group whitespace-nowrap"
+                className="relative py-1 text-xs font-medium uppercase tracking-[0.14em] text-[#fff] hover:text-[#f3f1ea] transition-colors group whitespace-nowrap"
               >
                 <span>{link.label}</span>
                 <span className="absolute bottom-0 left-0 h-[1px] bg-[#ff3b1d] w-0 group-hover:w-full transition-all duration-300" />

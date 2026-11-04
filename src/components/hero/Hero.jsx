@@ -27,7 +27,7 @@ export const Hero = ({ isReady, onExploreServices, onGetFareEstimate }) => {
           <img
             src={heroContent.heroImage}
             alt="UK executive private hire transport"
-            className="w-full h-full object-cover object-center opacity-20 brightness-75 contrast-125"
+            className="w-full h-full object-cover object-center opacity-50"
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#08080a]/60 to-[#08080a]" />
