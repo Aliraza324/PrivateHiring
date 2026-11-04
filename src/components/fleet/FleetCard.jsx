@@ -16,7 +16,7 @@ export const FleetCard = ({ vehicle, onSelect }) => {
           </div>
         </div>
 
-        <div className="p-5">
+        <div className="p-3.5 sm:p-5">
           <h3 className="font-display text-xl uppercase tracking-tight text-[#f3f1ea] group-hover:text-[#ff3b1d] transition-colors">
             {vehicle.category}
           </h3>

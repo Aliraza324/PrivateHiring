@@ -8,13 +8,13 @@ export const CorporateSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <section id="corporate-travel" className="py-16 lg:py-20 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-[#111114] border border-[rgba(243,241,234,0.1)] rounded-3xl p-7 sm:p-10 lg:p-12 relative overflow-hidden">
-          <div className="max-w-3xl space-y-5">
+    <section id="corporate-travel" className="py-12 sm:py-16 lg:py-20 relative">
+      <div className="max-w-7xl mx-auto px-1.5 sm:px-6 lg:px-8">
+        <div className="bg-[#111114] border border-[rgba(243,241,234,0.1)] rounded-2xl sm:rounded-3xl p-3.5 sm:p-10 lg:p-12 relative overflow-hidden">
+          <div className="max-w-3xl space-y-4 sm:space-y-5">
             <Eyebrow label={corporateContent.eyebrow} />
 
-            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl uppercase tracking-tight text-[#f3f1ea] leading-[1.05]">
+            <h2 className="font-display text-xl sm:text-3xl lg:text-4xl uppercase tracking-tight text-[#f3f1ea] leading-[1.05]">
               {corporateContent.headline}
             </h2>
 
@@ -22,9 +22,9 @@ export const CorporateSection = () => {
               {corporateContent.description}
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 pt-2">
               {corporateContent.benefits.map((benefit, idx) => (
-                <div key={idx} className="bg-[#08080a] p-4 rounded-xl border border-[rgba(243,241,234,0.08)]">
+                <div key={idx} className="bg-[#08080a] p-3 sm:p-4 rounded-xl border border-[rgba(243,241,234,0.08)]">
                   <div className="flex items-center gap-2 text-xs sm:text-sm font-bold text-[#f3f1ea] mb-1">
                     <IconCheck className="w-3.5 h-3.5 text-[#ff3b1d] shrink-0" />
                     <span>{benefit.title}</span>
@@ -36,14 +36,14 @@ export const CorporateSection = () => {
               ))}
             </div>
 
-            <div className="pt-4 flex flex-wrap items-center gap-4">
+            <div className="pt-3 sm:pt-4 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
               <button
                 type="button"
                 onClick={() => setIsModalOpen(true)}
-                className="h-11 px-7 bg-[#ff3b1d] hover:bg-[#ff6a3d] text-[#08080a] font-display text-xs uppercase tracking-wider rounded-full shadow-xl shadow-[#ff3b1d]/20 transition-all flex items-center gap-2 group"
+                className="w-full sm:w-auto h-11 px-5 sm:px-7 bg-[#ff3b1d] hover:bg-[#ff6a3d] text-[#08080a] font-display text-xs uppercase tracking-wider rounded-full shadow-xl shadow-[#ff3b1d]/20 transition-all flex items-center justify-center gap-2 group whitespace-nowrap"
               >
                 <span>{corporateContent.ctaText}</span>
-                <IconArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <IconArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform shrink-0" />
               </button>
 
               <span className="text-[11px] text-[#807f78]">

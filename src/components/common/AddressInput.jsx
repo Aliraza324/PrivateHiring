@@ -40,7 +40,7 @@ export const AddressInput = ({
           setIsOpen(true);
         }}
         placeholder={placeholder}
-        className="w-full bg-[#08080a] border border-[rgba(243,241,234,0.1)] hover:border-[rgba(243,241,234,0.25)] focus:border-[#ff3b1d] rounded-xl px-4 py-3 text-sm text-[#f3f1ea] placeholder-[#807f78] focus:outline-none transition-colors"
+        className="w-full bg-[#08080a] border border-[rgba(243,241,234,0.1)] hover:border-[rgba(243,241,234,0.25)] focus:border-[#ff3b1d] rounded-xl px-3 py-2.5 sm:px-4 sm:py-3 text-xs sm:text-sm text-[#f3f1ea] placeholder-[#807f78] focus:outline-none transition-colors"
       />
 
       {isOpen && displayList.length > 0 && (

@@ -39,11 +39,11 @@ export const BookingWidget = ({ selectedVehicleId }) => {
   const currentVehicleObj = vehicleCategories.find((v) => v.id === selectedVehicle) || vehicleCategories[0];
 
   return (
-    <div id="booking" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 sm:-mt-10 relative z-20">
-      <div className="bg-[#111114] border border-[rgba(243,241,234,0.15)] rounded-3xl shadow-2xl backdrop-blur-xl">
+    <div id="booking" className="max-w-7xl mx-auto px-1.5 sm:px-6 lg:px-8 mt-5 sm:-mt-10 relative z-20">
+      <div className="bg-[#111114] border border-[rgba(243,241,234,0.15)] rounded-2xl sm:rounded-3xl shadow-2xl backdrop-blur-xl overflow-hidden">
         <BookingTabs activeTab={activeTab} onSelectTab={setActiveTab} />
 
-        <form onSubmit={handleSubmit} className="p-6 sm:p-8 space-y-6">
+        <form onSubmit={handleSubmit} className="p-3.5 sm:p-8 space-y-4 sm:space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label className="block text-xs font-semibold uppercase tracking-wider text-[#807f78] mb-1.5 flex items-center gap-1.5">
@@ -154,10 +154,10 @@ export const BookingWidget = ({ selectedVehicleId }) => {
 
             <button
               type="submit"
-              className="w-full sm:w-auto h-11 px-7 bg-[#ff3b1d] hover:bg-[#ff6a3d] text-[#08080a] font-display text-xs uppercase tracking-wider rounded-xl shadow-xl shadow-[#ff3b1d]/20 transition-all flex items-center justify-center gap-2 group"
+              className="w-full sm:w-auto h-11 px-4 sm:px-7 bg-[#ff3b1d] hover:bg-[#ff6a3d] text-[#08080a] font-display text-[11px] sm:text-xs uppercase tracking-wider rounded-xl shadow-xl shadow-[#ff3b1d]/20 transition-all flex items-center justify-center gap-2 group whitespace-nowrap"
             >
               <span>Check Availability / Get Fare</span>
-              <IconArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <IconArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform shrink-0" />
             </button>
           </div>
         </form>

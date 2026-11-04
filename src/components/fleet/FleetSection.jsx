@@ -14,8 +14,8 @@ export const FleetSection = ({ onSelectVehicle }) => {
   };
 
   return (
-    <section id="our-fleet" className="py-16 lg:py-20 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="our-fleet" className="py-12 sm:py-16 lg:py-20 relative">
+      <div className="max-w-7xl mx-auto px-1.5 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-10">
           <Eyebrow label="Our Vehicle Categories" className="mb-2" />
           <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl uppercase tracking-tight text-[#f3f1ea]">
