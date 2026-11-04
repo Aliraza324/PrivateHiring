@@ -22,7 +22,7 @@ export const Footer = ({ onOpenBooking }) => {
             <img
               src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=1600&q=80"
               alt="London executive private hire"
-              className="w-full h-full object-cover opacity-20 brightness-75 contrast-125"
+              className="w-full h-full object-cover opacity-70 brightness-75 contrast-125"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[#111114] via-[#111114]/90 to-transparent" />
           </div>
