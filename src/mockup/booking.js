@@ -31,3 +31,27 @@ export const sampleAddresses = [
   'City of London, EC2R 8AH'
 ];
 
+export const sampleDates = [
+  'Today (Immediate or Later)',
+  'Tomorrow',
+  'In 2 Days',
+  'In 3 Days',
+  'This Friday',
+  'This Saturday',
+  'Next Monday',
+  'Advance Booking (Next Week)'
+];
+
+export const sampleTimes = [
+  'As Soon As Possible (ASAP)',
+  '06:00 (Early Airport Flight)',
+  '07:30 (Morning Commute)',
+  '09:00 (Business Meeting)',
+  '11:30 (Midday)',
+  '14:00 (Afternoon)',
+  '16:30 (School / Corporate)',
+  '18:00 (Evening Peak)',
+  '20:30 (Dinner / Theatre)',
+  '22:00 (Night Transfer)',
+  '23:30 (Late Flight Arrival)'
+];

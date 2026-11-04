@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { CustomSelect } from '../common/CustomSelect';
 import { IconClose, IconCheck, IconBuilding } from '../common/Icons';
 
 export const CorporateModal = ({ isOpen, onClose }) => {
@@ -20,6 +21,13 @@ export const CorporateModal = ({ isOpen, onClose }) => {
     setSubmitted(false);
     onClose();
   };
+
+  const rideOptions = [
+    { value: '1-10', label: '1 - 10 journeys / month' },
+    { value: '10-30', label: '10 - 30 journeys / month' },
+    { value: '30-100', label: '30 - 100 journeys / month' },
+    { value: '100+', label: '100+ journeys / month' }
+  ];
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#08080a]/80 backdrop-blur-md overflow-y-auto">
@@ -131,16 +139,11 @@ export const CorporateModal = ({ isOpen, onClose }) => {
               <label className="block text-[11px] font-semibold uppercase tracking-wider text-[#807f78] mb-1">
                 Estimated Monthly Journeys
               </label>
-              <select
+              <CustomSelect
                 value={estRides}
-                onChange={(e) => setEstRides(e.target.value)}
-                className="w-full bg-[#08080a] border border-[rgba(243,241,234,0.1)] rounded-xl px-3 py-2 text-xs text-[#f3f1ea] focus:outline-none focus:border-[#ff3b1d]"
-              >
-                <option value="1-10">1 - 10 journeys / month</option>
-                <option value="10-30">10 - 30 journeys / month</option>
-                <option value="30-100">30 - 100 journeys / month</option>
-                <option value="100+">100+ journeys / month</option>
-              </select>
+                onChange={setEstRides}
+                options={rideOptions}
+              />
             </div>
 
             <div className="pt-2 flex gap-3">
