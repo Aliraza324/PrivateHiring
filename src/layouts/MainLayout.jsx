@@ -36,7 +36,7 @@ export const MainLayout = () => {
         onOpenBooking={handleOpenBooking}
       />
 
-      <main className="w-full overflow-x-clip p-2 sm:p-3 flex flex-col gap-3 flex-1">
+      <main className="w-full overflow-x-clip p-1 sm:p-3 flex flex-col gap-3 flex-1">
         <Outlet context={{ isReady: isLoaderReady, onOpenBooking: handleOpenBooking }} />
       </main>
 

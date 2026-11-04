@@ -14,23 +14,23 @@ export const CoreServices = () => {
   };
 
   return (
-    <section className="py-16 px-6 sm:px-10 lg:px-14 rounded-[2rem] bg-[#111114] border border-[rgba(243,241,234,0.1)] relative">
+    <section className="py-12 sm:py-16 px-3.5 sm:px-10 lg:px-14 rounded-2xl sm:rounded-[2rem] bg-[#111114] border border-[rgba(243,241,234,0.1)] relative">
       <div className="max-w-7xl mx-auto">
-        <div className="max-w-2xl mb-12">
+        <div className="max-w-2xl mb-8 sm:mb-12">
           <Eyebrow label="What We Do" className="mb-2" />
-          <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl uppercase tracking-tight text-[#f3f1ea]">
+          <h2 className="font-display text-xl sm:text-3xl lg:text-4xl uppercase tracking-tight text-[#f3f1ea]">
             Specialist Private Hire & Transport Services
           </h2>
-          <p className="mt-3 text-sm text-[#807f78]">
+          <p className="mt-2.5 text-xs sm:text-sm text-[#807f78]">
             Tailored journeys backed by licensed chauffeurs, modern clean vehicles, and 24/7 dedicated telephone dispatch support.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
           {coreServices.map((service) => (
             <div
               key={service.id}
-              className="bg-[#08080a] border border-[rgba(243,241,234,0.1)] rounded-2xl p-7 hover:border-[#ff3b1d]/40 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1 hover:shadow-xl"
+              className="bg-[#08080a] border border-[rgba(243,241,234,0.1)] rounded-2xl p-4 sm:p-7 hover:border-[#ff3b1d]/40 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1 hover:shadow-xl"
             >
               <div>
                 <div className="flex items-center justify-between mb-3">

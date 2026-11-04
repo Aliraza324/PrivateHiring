@@ -4,23 +4,23 @@ import { IconArrowRight } from '../common/Icons';
 
 export const HowItWorks = ({ onBookNow }) => {
   return (
-    <section id="how-it-works" className="py-16 lg:py-20 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-12">
+    <section id="how-it-works" className="py-12 sm:py-16 lg:py-20 relative">
+      <div className="max-w-7xl mx-auto px-1.5 sm:px-6 lg:px-8">
+        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
           <Eyebrow label="Simple 3-Step Process" className="mb-2" />
-          <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl uppercase tracking-tight text-[#f3f1ea]">
+          <h2 className="font-display text-xl sm:text-3xl lg:text-4xl uppercase tracking-tight text-[#f3f1ea]">
             How Your Booking Works
           </h2>
-          <p className="mt-3 text-sm text-[#807f78]">
+          <p className="mt-2.5 text-xs sm:text-sm text-[#807f78]">
             Booking your private hire journey takes less than three minutes with clear upfront details and immediate dispatch alerts.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 relative">
           {howItWorksSteps.map((item, idx) => (
             <div
               key={idx}
-              className="bg-[#111114] border border-[rgba(243,241,234,0.1)] rounded-2xl p-7 relative flex flex-col justify-between hover:border-[#ff3b1d]/40 transition-all group"
+              className="bg-[#111114] border border-[rgba(243,241,234,0.1)] rounded-2xl p-4 sm:p-7 relative flex flex-col justify-between hover:border-[#ff3b1d]/40 transition-all group"
             >
               <div>
                 <div className="flex items-center justify-between mb-5">

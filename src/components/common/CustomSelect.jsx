@@ -33,7 +33,7 @@ export const CustomSelect = ({
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full bg-[#08080a] border border-[rgba(243,241,234,0.1)] hover:border-[rgba(243,241,234,0.25)] focus:border-[#ff3b1d] rounded-xl px-3.5 py-3 text-xs sm:text-sm text-[#f3f1ea] flex items-center justify-between gap-2 transition-all outline-none"
+        className="w-full bg-[#08080a] border border-[rgba(243,241,234,0.1)] hover:border-[rgba(243,241,234,0.25)] focus:border-[#ff3b1d] rounded-xl px-3 py-2.5 sm:px-3.5 sm:py-3 text-xs sm:text-sm text-[#f3f1ea] flex items-center justify-between gap-2 transition-all outline-none"
       >
         <span className="truncate">
           {selectedOption ? getLabel(selectedOption) : placeholder}
