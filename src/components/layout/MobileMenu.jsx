@@ -22,8 +22,12 @@ export const MobileMenu = ({ isOpen, onClose, onOpenBooking }) => {
       <div>
         <div className="flex items-center justify-between pb-6 border-b border-[rgba(243,241,234,0.1)]">
           <Link to="/" onClick={onClose} className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full border border-[rgba(243,241,234,0.22)] grid place-items-center text-[#f3f1ea] font-display text-sm">
-              AP
+            <div className="w-10 h-10 rounded-xl overflow-hidden bg-[#111114] border border-[rgba(243,241,234,0.2)] p-0.5">
+              <img
+                src="/logo.png"
+                alt="Apex Private Hire Logo"
+                className="w-full h-full object-cover rounded-lg"
+              />
             </div>
             <div className="font-display text-lg uppercase tracking-tight text-[#f3f1ea]">
               <span>APEX</span> <span className="text-[#ff3b1d]">PRIVATE HIRE</span>

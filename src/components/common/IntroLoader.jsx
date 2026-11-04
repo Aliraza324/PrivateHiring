@@ -55,11 +55,20 @@ export const IntroLoader = ({ onReady }) => {
       }}
     >
       <div
-        className={`font-display text-2xl sm:text-3xl uppercase tracking-tight text-[#f3f1ea] transition-opacity duration-300 ${
+        className={`flex items-center gap-3 transition-opacity duration-300 ${
           labelsFaded ? 'opacity-0' : 'opacity-100'
         }`}
       >
-        <span>APEX</span> <span className="text-[#ff3b1d]">PRIVATE HIRE</span>
+        <div className="w-12 h-12 rounded-xl overflow-hidden bg-[#111114] border border-[rgba(243,241,234,0.2)] p-0.5">
+          <img
+            src="/logo.png"
+            alt="Apex Private Hire Logo"
+            className="w-full h-full object-cover rounded-lg"
+          />
+        </div>
+        <div className="font-display text-2xl sm:text-3xl uppercase tracking-tight text-[#f3f1ea]">
+          <span>APEX</span> <span className="text-[#ff3b1d]">PRIVATE HIRE</span>
+        </div>
       </div>
 
       <div
@@ -73,4 +82,3 @@ export const IntroLoader = ({ onReady }) => {
     </div>
   );
 };
-

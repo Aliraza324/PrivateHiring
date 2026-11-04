@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router';
 import { brandData, navLinks } from '../../mockup/navigation';
-import { IconCar, IconPhone } from '../common/Icons';
+import { IconPhone } from '../common/Icons';
 
 export const Navbar = ({ onOpenBooking, onOpenMobileMenu }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,15 +30,19 @@ export const Navbar = ({ onOpenBooking, onOpenMobileMenu }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-full border border-[rgba(243,241,234,0.22)] grid place-items-center text-[#f3f1ea] font-display text-sm group-hover:border-[#ff3b1d] group-hover:text-[#ff3b1d] transition-colors">
-              AP
+            <div className="w-11 h-11 rounded-xl overflow-hidden bg-[#111114] border border-[rgba(243,241,234,0.2)] p-0.5 group-hover:border-[#ff3b1d] group-hover:shadow-lg group-hover:shadow-[#ff3b1d]/20 transition-all duration-300">
+              <img
+                src="/logo.png"
+                alt="Apex Private Hire Logo"
+                className="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+              />
             </div>
             <div>
-              <div className="font-display text-lg uppercase tracking-tight text-[#f3f1ea] flex items-center gap-1.5">
+              <div className="font-display text-lg uppercase tracking-tight text-[#f3f1ea] flex items-center gap-1.5 leading-none">
                 <span>APEX</span>
                 <span className="text-[#ff3b1d]">PRIVATE HIRE</span>
               </div>
-              <p className="text-[10px] text-[#807f78] uppercase tracking-[0.22em] hidden sm:block">
+              <p className="text-[10px] text-[#807f78] uppercase tracking-[0.22em] mt-1 hidden sm:block">
                 UK Executive Transport
               </p>
             </div>

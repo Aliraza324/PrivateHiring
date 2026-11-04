@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <linearGradient id="apexGlow" x1="60" y1="10" x2="60" y2="110" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ff3b1d" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#ff3b1d" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="apexRed" x1="30" y1="20" x2="90" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ff6a3d" />
+      <stop offset="50%" stop-color="#ff3b1d" />
+      <stop offset="100%" stop-color="#c91f06" />
+    </linearGradient>
+    <linearGradient id="apexSilver" x1="20" y1="20" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="45%" stop-color="#d1d5db" />
+      <stop offset="70%" stop-color="#9ca3af" />
+      <stop offset="100%" stop-color="#4b5563" />
+    </linearGradient>
+    <linearGradient id="apexDark" x1="60" y1="20" x2="60" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1f242e" />
+      <stop offset="100%" stop-color="#0a0c10" />
+    </linearGradient>
+  </defs>
+
+  <circle cx="60" cy="60" r="56" fill="url(#apexDark)" stroke="url(#apexSilver)" stroke-width="1.5" stroke-opacity="0.4" />
+  <circle cx="60" cy="60" r="50" stroke="url(#apexRed)" stroke-width="0.75" stroke-opacity="0.3" stroke-dasharray="3 3" />
+  <circle cx="60" cy="60" r="46" fill="url(#apexGlow)" />
+
+  <polygon points="60,18 96,84 84,88 60,38 36,88 24,84" fill="url(#apexSilver)" />
+  <polygon points="60,28 88,80 78,83 60,45 42,83 32,80" fill="url(#apexDark)" />
+
+  <polygon points="60,34 78,74 60,62" fill="url(#apexRed)" />
+  <polygon points="60,34 60,62 42,74" fill="#c91f06" />
+
+  <polygon points="60,68 74,78 60,86 46,78" fill="url(#apexSilver)" />
+  <polygon points="60,72 70,78 60,83 50,78" fill="url(#apexRed)" />
+
+  <line x1="16" y1="60" x2="30" y2="60" stroke="url(#apexRed)" stroke-width="2" stroke-linecap="round" />
+  <line x1="90" y1="60" x2="104" y2="60" stroke="url(#apexRed)" stroke-width="2" stroke-linecap="round" />
+</svg>
+
