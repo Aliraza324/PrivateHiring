@@ -18,6 +18,14 @@ export const Footer = ({ onOpenBooking }) => {
     <footer id="contact" className="bg-[#08080a] text-[#807f78] pt-10 sm:pt-14 pb-8 sm:pb-10 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-1.5 sm:px-6 lg:px-8">
         <div className="bg-[#111114] rounded-2xl sm:rounded-3xl p-3.5 sm:p-10 lg:p-12 border border-[rgba(243,241,234,0.1)] mb-10 sm:mb-14 relative overflow-hidden">
+          <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+            <img
+              src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=1600&q=80"
+              alt="London executive private hire"
+              className="w-full h-full object-cover opacity-20 brightness-75 contrast-125"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#111114] via-[#111114]/90 to-transparent" />
+          </div>
           <div className="relative z-10 max-w-2xl">
             <Eyebrow label={finalCtaContent.eyebrow} className="mb-2 sm:mb-3" />
             <h2 className="font-display text-xl sm:text-3xl lg:text-5xl uppercase tracking-tight text-[#f3f1ea] leading-[1.05]">

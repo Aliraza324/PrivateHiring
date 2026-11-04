@@ -47,6 +47,23 @@ export const AirportSection = ({ onBookAirportTransfer }) => {
             </div>
 
             <div className="lg:col-span-5 space-y-4">
+              <div className="relative h-44 sm:h-52 rounded-2xl overflow-hidden border border-[rgba(243,241,234,0.1)] group">
+                <img
+                  src={airportHighlight.image}
+                  alt="UK Airport Transfer Chauffeur"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#08080a] via-[#08080a]/35 to-transparent" />
+                <div className="absolute top-3 left-3 px-2.5 py-1 bg-[#08080a]/80 backdrop-blur-md rounded-full border border-[rgba(243,241,234,0.15)] flex items-center gap-1.5 text-[11px] font-display uppercase tracking-wider text-[#ff3b1d]">
+                  <IconPlane className="w-3.5 h-3.5" />
+                  <span>Terminal Meet & Greet</span>
+                </div>
+                <div className="absolute bottom-3 left-3 right-3 text-xs text-[#f3f1ea] font-medium flex items-center justify-between">
+                  <span>Heathrow • Gatwick • City • Stansted</span>
+                  <span className="text-[10px] text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded border border-emerald-400/20">Live</span>
+                </div>
+              </div>
+
               <div className="bg-[#08080a] p-3.5 sm:p-5 rounded-xl sm:rounded-2xl border border-[rgba(243,241,234,0.08)]">
                 <div className="flex items-center justify-between pb-3 border-b border-[rgba(243,241,234,0.08)]">
                   <h3 className="font-display text-sm uppercase tracking-wider text-[#f3f1ea] flex items-center gap-2">

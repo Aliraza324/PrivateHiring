@@ -3,6 +3,7 @@ export const corporateContent = {
   headline: 'Executive Ground Transport Engineered for Business Productivity',
   description: 'Streamline company travel, client airport hospitality, and multi-passenger roadshows with dedicated corporate account privileges, priority dispatch, and transparent monthly invoicing.',
   ctaText: 'Enquire About Corporate Travel',
+  image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80',
   benefits: [
     {
       title: 'Monthly Consolidated Invoicing',
@@ -22,4 +23,3 @@ export const corporateContent = {
     }
   ]
 };
-

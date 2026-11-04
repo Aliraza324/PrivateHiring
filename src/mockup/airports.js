@@ -3,6 +3,7 @@ export const airportHighlight = {
   headline: 'Punctual UK Airport Transfers With Zero Waiting Anxiety',
   description: 'Whether landing at Heathrow, Gatwick, Manchester or Stansted, our dedicated airport transfer team monitors your incoming flight in real time so your driver is ready when you step into the terminal.',
   ctaText: 'Book Airport Transfer',
+  image: 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1200&q=80',
   features: [
     {
       title: 'Real-Time Flight Tracking',
@@ -30,4 +31,3 @@ export const airportHighlight = {
     { name: 'London City Airport', code: 'LCY', terminals: 'Jet Centre & Main' }
   ]
 };
-

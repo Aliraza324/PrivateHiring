@@ -23,7 +23,7 @@ export const HowItWorks = ({ onBookNow }) => {
               className="bg-[#111114] border border-[rgba(243,241,234,0.1)] rounded-2xl p-4 sm:p-7 relative flex flex-col justify-between hover:border-[#ff3b1d]/40 transition-all group"
             >
               <div>
-                <div className="flex items-center justify-between mb-5">
+                <div className="flex items-center justify-between mb-4">
                   <div className="w-10 h-10 rounded-xl bg-[#ff3b1d]/10 border border-[#ff3b1d]/20 flex items-center justify-center text-[#ff3b1d] font-display text-lg">
                     {item.step}
                   </div>
@@ -35,12 +35,53 @@ export const HowItWorks = ({ onBookNow }) => {
                 <h3 className="font-display text-xl uppercase tracking-tight text-[#f3f1ea] mb-2 group-hover:text-[#ff3b1d] transition-colors">
                   {item.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-[#807f78] leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#807f78] leading-relaxed mb-4">
                   {item.description}
                 </p>
+
+                {idx === 0 && (
+                  <div className="my-3 p-3 rounded-xl bg-[#08080a] border border-[rgba(243,241,234,0.08)] space-y-1.5">
+                    <div className="flex items-center gap-2 text-[11px] text-[#f3f1ea]">
+                      <span className="w-2 h-2 rounded-full bg-emerald-400 shrink-0" />
+                      <span className="truncate">Mayfair, London W1</span>
+                    </div>
+                    <div className="h-2 border-l border-dashed border-[rgba(243,241,234,0.2)] ml-1" />
+                    <div className="flex items-center gap-2 text-[11px] text-[#f3f1ea]">
+                      <span className="w-2 h-2 rounded-full bg-[#ff3b1d] shrink-0" />
+                      <span className="truncate">Heathrow Airport T5</span>
+                    </div>
+                  </div>
+                )}
+
+                {idx === 1 && (
+                  <div className="my-3 p-3 rounded-xl bg-[#08080a] border border-[rgba(243,241,234,0.08)] flex items-center justify-between">
+                    <div>
+                      <div className="text-xs font-semibold text-[#f3f1ea]">Executive Saloon</div>
+                      <div className="text-[10px] text-[#807f78]">Mercedes E-Class • 3 Pax</div>
+                    </div>
+                    <span className="font-display text-sm text-[#ff3b1d] bg-[#ff3b1d]/10 px-2.5 py-1 rounded-md border border-[#ff3b1d]/20">
+                      £54.00
+                    </span>
+                  </div>
+                )}
+
+                {idx === 2 && (
+                  <div className="my-3 p-3 rounded-xl bg-[#08080a] border border-[rgba(243,241,234,0.08)] flex items-center justify-between">
+                    <div className="flex items-center gap-2 text-left">
+                      <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0" />
+                      <div>
+                        <div className="text-xs font-semibold text-[#f3f1ea]">Chauffeur Assigned</div>
+                        <div className="text-[10px] text-[#807f78]">Live GPS Tracking Sent</div>
+                      </div>
+                    </div>
+                    <span className="text-[10px] font-semibold text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded border border-emerald-400/20">
+                      Active
+                    </span>
+                  </div>
+                )}
               </div>
 
-              <div className="mt-6 pt-3 border-t border-[rgba(243,241,234,0.08)] flex items-center gap-2 text-xs font-semibold text-[#ff3b1d]">
+              <div className="mt-5 pt-3 border-t border-[rgba(243,241,234,0.08)] flex items-center gap-2 text-xs font-semibold text-[#ff3b1d]">
                 <span>Step {item.step} of 03</span>
                 <IconArrowRight className="w-3.5 h-3.5" />
               </div>

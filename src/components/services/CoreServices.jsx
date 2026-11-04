@@ -26,40 +26,49 @@ export const CoreServices = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
           {coreServices.map((service) => (
             <div
               key={service.id}
-              className="bg-[#08080a] border border-[rgba(243,241,234,0.1)] rounded-2xl p-4 sm:p-7 hover:border-[#ff3b1d]/40 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1 hover:shadow-xl"
+              className="bg-[#08080a] border border-[rgba(243,241,234,0.1)] rounded-2xl overflow-hidden hover:border-[#ff3b1d]/40 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1 hover:shadow-xl"
             >
               <div>
-                <div className="flex items-center justify-between mb-3">
-                  <span className="font-display text-2xl font-normal text-[#ff3b1d]">
-                    {service.number}
-                  </span>
-                  <span className="w-8 h-8 rounded-full bg-[#111114] flex items-center justify-center text-[#807f78] group-hover:text-[#ff3b1d] group-hover:bg-[#ff3b1d]/10 transition-colors">
-                    <IconArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                  </span>
+                <div className="relative h-44 sm:h-52 overflow-hidden bg-[#111114]">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#08080a] via-[#08080a]/35 to-transparent" />
+                  <div className="absolute top-3.5 left-3.5 px-3 py-1 bg-[#08080a]/80 backdrop-blur-md rounded-full border border-[rgba(243,241,234,0.15)] flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#ff3b1d]" />
+                    <span className="font-display text-xs text-[#ff3b1d]">SERVICE {service.number}</span>
+                  </div>
+                  <div className="absolute bottom-3 right-3 w-8 h-8 rounded-full bg-[#08080a]/80 backdrop-blur-md border border-[rgba(243,241,234,0.15)] flex items-center justify-center text-[#807f78] group-hover:text-[#ff3b1d] group-hover:border-[#ff3b1d]/40 transition-colors">
+                    <IconArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                  </div>
                 </div>
 
-                <h3 className="font-display text-xl uppercase tracking-tight text-[#f3f1ea] mb-2 group-hover:text-[#ff3b1d] transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-[#807f78] leading-relaxed mb-5">
-                  {service.shortDescription}
-                </p>
+                <div className="p-4 sm:p-6">
+                  <h3 className="font-display text-lg sm:text-xl uppercase tracking-tight text-[#f3f1ea] mb-2 group-hover:text-[#ff3b1d] transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#807f78] leading-relaxed mb-4">
+                    {service.shortDescription}
+                  </p>
 
-                <div className="space-y-1.5 pt-3.5 border-t border-[rgba(243,241,234,0.08)]">
-                  {service.highlights.map((item, idx) => (
-                    <div key={idx} className="flex items-center gap-2 text-xs text-[#f3f1ea]">
-                      <IconCheck className="w-3.5 h-3.5 text-[#ff3b1d] shrink-0" />
-                      <span>{item}</span>
-                    </div>
-                  ))}
+                  <div className="space-y-1.5 pt-3 border-t border-[rgba(243,241,234,0.08)]">
+                    {service.highlights.map((item, idx) => (
+                      <div key={idx} className="flex items-center gap-2 text-xs text-[#f3f1ea]">
+                        <IconCheck className="w-3.5 h-3.5 text-[#ff3b1d] shrink-0" />
+                        <span>{item}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
 
-              <div className="mt-6 pt-3">
+              <div className="px-4 pb-4 sm:px-6 sm:pb-6 pt-0">
                 <Link
                   to={service.href}
                   onClick={() => handleScroll(service.href)}
