@@ -1,18 +1,10 @@
-export const navigationData = [
-  { id: 1, label: 'Programs', path: '/programs' },
-  { id: 2, label: 'Coaches', path: '/coaches' },
-  { id: 3, label: 'Facilities', path: '/facilities' },
-  { id: 4, label: 'About', path: '/about' },
-  { id: 5, label: 'Contact', path: '/contact' }
-];
-
-export const heroData = {
-  headline: 'Own The Court',
-  taglineTop: 'Show Up,',
-  taglineBottom: 'Level Up',
-  statsHighlight: {
-    value: '9K+',
-    label: 'Members on court'
-  }
-};
-
+export * from './navigation.js';
+export * from './hero.js';
+export * from './booking.js';
+export * from './fleet.js';
+export * from './services.js';
+export * from './howItWorks.js';
+export * from './trust.js';
+export * from './airports.js';
+export * from './corporate.js';
+export * from './footer.js';
